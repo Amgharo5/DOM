@@ -45,24 +45,41 @@
   - PreventDefault() => this function stop the default event
 */
 
-let userInput = document.querySelector('[name="username"]');
-let ageInput = document.querySelector('[name="age"]');
+// let userInput = document.querySelector('[name="username"]');
+// let ageInput = document.querySelector('[name="age"]');
 
-document.forms[0].onsubmit = function (e) {
-  let userValid = false;
-  let ageValid = false;
+// document.forms[0].onsubmit = function (e) {
+//   let userValid = false;
+//   let ageValid = false;
 
-  if (userInput.value !== "" && userInput.value.length <= 10) {
-    userValid = true;
-  }
-  if (ageInput !== "") {
-    ageValid = true;
-  }
+//   if (userInput.value !== "" && userInput.value.length <= 10) {
+//     userValid = true;
+//   }
+//   if (ageInput !== "") {
+//     ageValid = true;
+//   }
 
-  if (userValid === false || ageValid === false) {
-    e.preventDefault();
-  }
-};
-document.links[0].onclick = function (event) {
-  event.preventDefault();
-};
+//   if (userValid === false || ageValid === false) {
+//     e.preventDefault();
+//   }
+// };
+// document.links[0].onclick = function (event) {
+//   event.preventDefault();
+// };
+
+/*
+  DOM [Class List]
+  - classList
+  --- length
+  --- contains
+  --- item(index)
+  --- add
+  --- remove
+  --- toggle
+*/
+
+let element = document.getElementById("my-div");
+console.log(element.classList);
+console.log(typeof element.classList);
+console.log(element.classList.contains("one"));
+console.log(element.classList.contains("amghar"));
